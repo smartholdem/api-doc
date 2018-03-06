@@ -17,7 +17,7 @@ You're going to need:
 
 1. Fork this repository on GitHub.
 2. Clone *your forked repository* (not our original one) to your hard drive with `git clone https://github.com/smartholdem/api-doc.git`
-3. `cd slate`
+3. `cd api-doc`
 4. Initialize and start. You can either do this locally, or with Vagrant:
 
 ```shell

@@ -148,8 +148,6 @@ JSON Response
 
 Parameter | Type | Description
 --------- | ------- | -----------
-ip | string<br>(query) | A valid server IP
-port | integer<br>(query) | A valid server Port
 nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
 version | string<br>(header) | 0.0.2
 port | integer<br>(header) | 6100

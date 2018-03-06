@@ -13,7 +13,7 @@ curl -X GET "http://127.0.0.1:6100/peer/list"
 ```
 
 ```http
-GET api/peers/version HTTP/1.1
+GET /peer/list HTTP/1.1
 nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
 host: 127.0.0.1:6100
 ```
@@ -34,7 +34,7 @@ JSON Response
 
 ### HTTP Request
 
-`GET http://127.0.0.1:6100/api/peers/version`
+`GET http://127.0.0.1:6100/peer/list`
 
 ### Query Parameters
 

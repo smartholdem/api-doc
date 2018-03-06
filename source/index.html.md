@@ -14,6 +14,7 @@ includes:
   - introduction
   - accounts
   - blocks
+  - delegate
   - errors
 
 search: true

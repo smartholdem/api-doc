@@ -93,3 +93,59 @@ limit | integer<br>(query) | An unsigned integer that specifies the maximum numb
 nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
 version | string<br>(header) | 0.0.2
 port | integer<br>(header) | 6100
+
+## Get a list of voters for a delegate
+
+```shell
+curl -X GET "http://127.0.0.1/api/delegates/voters?publicKey={publicKey}" 
+-H "accept: application/json" 
+-H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
+-H "version: 0.0.2" 
+-H "port: 6100"
+```
+
+```http
+GET api/delegates/voters?publicKey={publicKey} HTTP/1.1
+nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+host: 127.0.0.1:6100
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "success":true,
+    "accounts":
+      [
+        {
+          "username":"gendelegate_8",
+          "address":"Sgx3VdXJyKGdNrtLP6J569zuWrevqA4qc1",
+          "publicKey":"02202a328734a92dda73673e8d163cd33a1047b05ca3c83508011883557f4c843e",
+          "balance":"16498890000000"
+        },
+        {
+          "username":null,
+          "address":"SRsTDAb5UvxpubvhR4xN4PBP3zsAjn88wH",
+          "publicKey":"03b04b6afc16b57923021d3f3eb89dc4efc8d7e975a1ecbfbeaca40ea4d61485b4",
+          "balance":"2631764374584"
+        }
+      ]
+  }
+]
+```
+
+JSON Response
+
+### HTTP Request
+
+`GET http://127.0.0.1:6100/api/delegates/voters?publicKey={publicKey}`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+publicKey  | string<br>(query) | A valid Public Key
+nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+version | string<br>(header) | 0.0.2
+port | integer<br>(header) | 6100

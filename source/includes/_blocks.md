@@ -308,3 +308,93 @@ Parameter | Type | Description
 nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
 version | string<br>(header) | 0.0.2
 port | integer<br>(header) | 6100
+
+
+## Get the Network Fees
+
+```shell
+curl -X GET "http://127.0.0.1/api/blocks/getFees" 
+-H "accept: application/json" 
+-H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
+-H "version: 0.0.2" 
+-H "port: 6100"
+```
+
+```http
+GET api/blocks/getFees HTTP/1.1
+nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+host: 127.0.0.1:6100
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "success":true,
+    "fees":
+      {
+        "send":10000000,
+        "vote":100000000,
+        "secondsignature":500000000,
+        "delegate":5500000000,
+        "multisignature":500000000
+      }
+  }
+]
+```
+
+Get the all fees network.
+
+### HTTP Request
+
+`GET http://127.0.0.1:6100/api/blocks/getFees`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+version | string<br>(header) | 0.0.2
+port | integer<br>(header) | 6100
+
+## Get the BlockChain Milestone
+
+```shell
+curl -X GET "http://127.0.0.1/api/blocks/getMilestone" 
+-H "accept: application/json" 
+-H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
+-H "version: 0.0.2" 
+-H "port: 6100"
+```
+
+```http
+GET api/blocks/getMilestone HTTP/1.1
+nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+host: 127.0.0.1:6100
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "success":true,
+    "milestone":0
+  }
+]
+```
+
+JSON Response
+
+### HTTP Request
+
+`GET http://127.0.0.1:6100/api/blocks/getMilestone`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+version | string<br>(header) | 0.0.2
+port | integer<br>(header) | 6100

@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/smartholdem/api-doc.svg?branch=master)](https://travis-ci.org/smartholdem/api-doc)
+
 <p align="center">If you find an error in our documentation, please feel free to open up a github issue and we'll get it fixed as soon as possible.</p>
 
 <p align="center"><img src="https://github.com/smartholdem/smartmedia/blob/master/mediakit/apiscreen.jpg" width=700 alt="Screenshot of Documentation"></p>

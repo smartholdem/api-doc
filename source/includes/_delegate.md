@@ -202,3 +202,73 @@ publicKey  | string<br>(query) | A valid Public Key
 nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
 version | string<br>(header) | 0.0.2
 port | integer<br>(header) | 6100
+
+## Get all delegates
+
+```shell
+curl -X GET "http://127.0.0.1/api/delegates?limit={limit}&offset={offset}" 
+-H "accept: application/json" 
+-H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
+-H "version: 0.0.2" 
+-H "port: 6100"
+```
+
+```http
+GET api/delegates/get?limit={limit}&offset={offset} HTTP/1.1
+nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+host: 127.0.0.1:6100
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "success":true,
+    "delegates":
+      [
+        {
+          "username":"terra",
+          "address":"SkLRQb6cFPdCpVDNLyQKtwUeUtwH3Mm5yf",
+          "publicKey":"0364b75b76624a97776bccc602e4a21864ac2f792b097841a2f6e2495d994b463b",
+          "vote":"120074817218230",
+          "producedblocks":6389,
+          "missedblocks":333,
+          "rate":65,
+          "approval":0.5,
+          "productivity":0
+        },
+        {
+          "username":"old_susanin",
+          "address":"SkK3c5UfZoa2T9fTM2iEw81HxqS7EisrTm",
+          "publicKey":"027a4f588f2ebd3498fb94e3b468139b9ab4a4cc9a0044dfe5ac8bc3c2f48a909f",
+          "vote":"113259700000000",
+          "producedblocks":1058,
+          "missedblocks":360,
+          "rate":66,
+          "approval":0.47,
+          "productivity":0
+        }
+      ],
+    "totalCount":234
+  }
+]
+```
+
+JSON Response
+
+### HTTP Request
+
+`GET http://127.0.0.1:6100/api/delegates?limit={limit}&offset={offset}`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+orderBy   | string<br>(query) | A string that specifies the column by which to sort the records.
+limit    | integer<br>(query) | An unsigned integer that specifies the maximum number of records.
+offset   | integer<br>(query) | An unsigned integer that specified the number of records to skip.
+nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+version | string<br>(header) | 0.0.2
+port | integer<br>(header) | 6100
+

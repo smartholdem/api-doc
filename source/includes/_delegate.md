@@ -149,3 +149,56 @@ publicKey  | string<br>(query) | A valid Public Key
 nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
 version | string<br>(header) | 0.0.2
 port | integer<br>(header) | 6100
+
+## Get a single delegate
+
+```shell
+curl -X GET "http://127.0.0.1/api/delegates/get?publicKey={publicKey}" 
+-H "accept: application/json" 
+-H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
+-H "version: 0.0.2" 
+-H "port: 6100"
+```
+
+```http
+GET api/delegates/get?publicKey={publicKey} HTTP/1.1
+nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+host: 127.0.0.1:6100
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "success":true,
+    "delegate":
+      {
+        "username":"tomray",
+        "address":"SMNwAWtVnkPjYrLG9wgtpwRG3nwxVQpL3x",
+        "publicKey":"0393dbe9e234b98b66c517b8ebff2b8c6649dd2fab9c33dd14616c4551458e6dff",
+        "vote":"228633454374584",
+        "producedblocks":10314,
+        "missedblocks":237,
+        "rate":4,
+        "approval":0.95,
+        "productivity":97.75
+      }
+  }
+]
+```
+
+JSON Response
+
+### HTTP Request
+
+`GET http://127.0.0.1:6100/api/delegates/get?publicKey={publicKey}`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+publicKey  | string<br>(query) | A valid Public Key
+nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+version | string<br>(header) | 0.0.2
+port | integer<br>(header) | 6100

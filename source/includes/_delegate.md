@@ -88,8 +88,8 @@ JSON Response
 
 Parameter | Type | Description
 --------- | ------- | -----------
-q | string<br>(query) | A search query.
-limit | integer<br>(query) | An unsigned integer that specifies the maximum number of records.
+q | string<br>(query) | A search query
+limit | integer<br>(query) | An unsigned integer that specifies the maximum number of records
 nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
 version | string<br>(header) | 0.0.2
 port | integer<br>(header) | 6100

@@ -15,6 +15,7 @@ includes:
   - accounts
   - blocks
   - delegate
+  - loader
   - errors
 
 search: true

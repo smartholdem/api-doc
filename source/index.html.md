@@ -18,6 +18,7 @@ includes:
   - transactions
   - delegate
   - loader
+  - peer
   - errors
 
 search: true

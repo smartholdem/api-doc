@@ -151,3 +151,60 @@ Parameter | Type | Description
 nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
 version | string<br>(header) | 0.0.2
 port | integer<br>(header) | 6100
+
+## Get the blockchain height
+
+```shell
+curl -X GET "http://127.0.0.1:6100/peer/height" 
+-H "accept: application/json" 
+-H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
+-H "version: 0.0.2" 
+-H "port: 6100"
+```
+
+```http
+GET /peer/height HTTP/1.1
+nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+host: 127.0.0.1:6100
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "success":true,
+    "height":838152,
+    "header":
+      {
+        "id":"1745814126765338549",
+        "height":838152,
+        "version":0,
+        "totalAmount":0,
+        "totalFee":0,
+        "reward":200000000,
+        "payloadHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "payloadLength":0,
+        "timestamp":9106896,
+        "numberOfTransactions":0,
+        "previousBlock":"15643855646433486272",
+        "generatorPublicKey":"033691a3abe70be86360d312c4b173d48e0a94fc34c10517e95dae711549533755",
+        "blockSignature":"3045022100dc956f488ff066529dd064acaa89fb5454ffa08bc92ebd24744780cc69581d9d02204444c98c1368e0c2ae765a126ed27068bbe4b09026d61e22b25054e98fd98b05"
+      }
+  }
+]
+```
+
+JSON Response
+
+### HTTP Request
+
+`GET http://127.0.0.1:6100/peer/height`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+version | string<br>(header) | 0.0.2
+port | integer<br>(header) | 6100

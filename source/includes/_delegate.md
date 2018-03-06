@@ -357,3 +357,59 @@ nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff
 version | string<br>(header) | 0.0.2
 port | integer<br>(header) | 6100
 
+## Get the next forger
+
+```shell
+curl -X GET "http://127.0.0.1/api/delegates/getNextForgers?address={address}" 
+-H "accept: application/json" 
+-H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
+-H "version: 0.0.2" 
+-H "port: 6100"
+```
+
+```http
+GET api/delegates/getNextForgers?address={address} HTTP/1.1
+nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+host: 127.0.0.1:6100
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "success":true,
+    "currentBlock":836047,
+    "currentSlot":1136180,
+    "delegates":
+      [
+        "03efb6fa51dcf652dbf1f6a7d5102628517264d3d39cfa4c61e75a631637cfbc92",
+        "0388a6b44c7188baaa31514a5decb8e5e9ce4ebef9ca47d72bf6b361aca5a38be8",
+        "02bcc5e31c334e04e05e02ea1f119b168306af1699a939c1829cf5b9a2e3a7703e",
+        "020b271151f8fe73951ebf9acadf569790a16a744e7b7640e204ff76907b92b541",
+        "035946968bf3c0be80d788c030601b840fb10afa2de81ea90516e4db21b106a244",
+        "02a38631617efc1d81cbea978bee3158f7232a1b9f50e06ed96410071f372afab3",
+        "03d059624fbc0379db4c93c276b83eccbc48acabe9896aa3c47f165efd36080db3",
+        "025af9eb82e8842330f5e1a3df832c49272531912b5ca45fc445bd49236a9d30e5",
+        "03e878e58677d9a0391707a24014564c36af50518610ff3b4d54b300153d35a0db",
+        "02c5ccbc6f2f56460fc274ba604ba819ab6c4b5a9ff6d89f4a24013b61a994c510"
+      ]
+  }
+]
+```
+
+JSON Response
+
+### HTTP Request
+
+`GET http://127.0.0.1:6100/api/delegates/getNextForgers?address={address}`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+address   | string<br>(query) | A valid Address
+nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
+version | string<br>(header) | 0.0.2
+port | integer<br>(header) | 6100
+

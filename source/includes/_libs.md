@@ -30,17 +30,40 @@ How To Use It:
 - start RPC server: forever start server.js
 - stop RPC server: forever stop server.js
 
+default port 8282
+
 ### Accounts:
 
 Get account balance from address:
 
-`GET https://127.0.0.1:8080/mainnet/account/{address}`
+`GET https://127.0.0.1:8282/mainnet/account/{address}`
 
 > Get account balance example
 
 ```shell
-curl -X GET "http://127.0.0.1:8080/mainnet/account/{address}" 
--H "accept: application/json" 
+curl -X GET "http://127.0.0.1:8282/mainnet/account/SUeGCt31AHwTZVcfZQwpPVL4jEUCtMMDTg" -H "accept: application/json" 
+```
+
+> RESPONSE
+
+```json
+[
+  {
+    "success":true,
+    "account":
+      {
+        "address":"SUeGCt31AHwTZVcfZQwpPVL4jEUCtMMDTg",
+        "unconfirmedBalance":"1440865700000000",
+        "balance":"1440865700000000",
+        "publicKey":"02babe75fc3f053e041f2258b11727c81b21bb690e69f2ea99b3121223b7536e56",
+        "unconfirmedSignature":0,
+        "secondSignature":0,
+        "secondPublicKey":null,
+        "multisignatures":[],
+        "u_multisignatures":[]
+      }
+  }
+]
 ```
 
 <aside class="warning">

@@ -142,7 +142,7 @@ curl -X GET "http://127.0.0.1:8282/{network}/account/bip38/{userid}"
 
 {network} - mainnet or testnet
 
-> RESPONSE Get account balance from address
+> RESPONSE
 
 ```json
 [

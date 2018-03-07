@@ -20,7 +20,7 @@ includes:
   - loader
   - peer
   - transport
-  - libs
+  - rpclib
   - errors
 
 search: true

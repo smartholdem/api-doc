@@ -27,7 +27,11 @@ forever start server.js
 - start RPC server: forever start server.js
 - stop RPC server: forever stop server.js
 
-default port 8282
+`default port 8282`
+
+<aside class="warning">
+Security Warning! All calls should be made from the server where RPC is running at localhost or 127.0.0.1. The RPC server should never be publicly accessible.
+</aside>
 
 ## Get account balance from address:
 
@@ -89,6 +93,4 @@ curl -X POST "http://127.0.0.1:8282/mainnet/account"
 ]
 ```
 
-<aside class="warning">
-Security Warning! All calls should be made from the server where RPC is running at localhost or 127.0.0.1. The RPC server should never be publicly accessible.
-</aside>
+

@@ -3,7 +3,7 @@
 ## Get the balance of an account
 
 ```shell
-curl -X GET "https://127.0.0.1/api/accounts/getBalance?address={address}" 
+curl -X GET "http://127.0.0.1:6100/api/accounts/getBalance?address={address}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -32,7 +32,7 @@ Return JSON.
 
 ### HTTP Request
 
-`GET https://127.0.0.1/api/accounts/getBalance?address={address}`
+`GET http://127.0.0.1:6100/api/accounts/getBalance?address={address}`
 
 ### Query Parameters
 
@@ -50,7 +50,7 @@ balance & unconfirmedBalance should be equal
 ## Get the public key of an account
 
 ```shell
-curl -X GET "https://127.0.0.1/api/accounts/getPublickey?address={address}" 
+curl -X GET "http://127.0.0.1:6100/api/accounts/getPublickey?address={address}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -93,7 +93,7 @@ port | integer<br>(header) | 6100
 ## Get the delegate fee of an account
 
 ```shell
-curl -X GET "https://127.0.0.1/api/accounts/delegates/fee" 
+curl -X GET "http://127.0.0.1:6100/api/accounts/delegates/fee" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -134,7 +134,7 @@ port | integer<br>(header) | 6100
 ## Get the delegates of an account
 
 ```shell
-curl -X GET "https://127.0.0.1/api/accounts/delegates?address={address}" 
+curl -X GET "http://127.0.0.1:6100/api/accounts/delegates?address={address}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -188,7 +188,7 @@ port | integer<br>(header) | 6100
 ## Returns account information of an address
 
 ```shell
-curl -X GET "https://127.0.0.1/api/accounts?address={address}" 
+curl -X GET "http://127.0.0.1:6100/api/accounts?address={address}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -241,7 +241,7 @@ port | integer<br>(header) | 6100
 ## Get a list of top accounts
 
 ```shell
-curl -X GET "https://127.0.0.1/api/accounts/top?limit={limit}&offset={offset}" 
+curl -X GET "http://127.0.0.1:6100/api/accounts/top?limit={limit}&offset={offset}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 

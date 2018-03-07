@@ -153,4 +153,58 @@ curl -X GET "http://127.0.0.1:8282/{network}/account/bip38/{userid}"
 ]
 ```
 
-`http://127.0.0.1:8282/{network}/account/bip38/{userid}`
+`POST http://127.0.0.1:8282/{network}/account/bip38`
+
+## Get last transactions from address
+
+```shell
+curl -X GET "http://127.0.0.1:8282/{network}/transactions/{address}"
+-H "accept: application/json" 
+```
+
+{network} - mainnet or testnet
+
+> RESPONSE
+
+```json
+[
+  {
+    "success":true,
+    "transactions":
+      [
+        {
+          "id":"c025f70cb32b9cfbf9160b95237c92d41644e1fdd4ead4a0052a07ffb5b97921",
+          "blockid":"15547375374841204258",
+          "type":0,
+          "timestamp":9156817,
+          "amount":17000000000,
+          "fee":10000000,
+          "senderId":"Sf6y6bFqdPiXt9qupmTdpJFJwBWmMCfs43",
+          "recipientId":"SZg73u3rVrqwahfZ2tU6G1E3YwDs52tMeW",
+          "senderPublicKey":"03e340952f7d726d8598b4ae68e88e583b39735c35b489559e082c705dba50376e",
+          "signature":"3045022100a2d732a3139ddbdaf27b9335894544fbcf590604c7e5a60a1ec72f295348f86402202f415d115c3390a6a45e81fec8c5f0177511aa421fd4ceb448262b334233ca96",
+          "asset":{},
+          "confirmations":927
+        },
+        {
+          "id":"41616c6d8393a55b3c911b400b14433e83ee3e3caf4dcedfb1684019b8566a3c",
+          "blockid":"13256355616806784710",
+          "type":0,
+          "timestamp":9156745,
+          "amount":17000000000,
+          "fee":10000000,
+          "senderId":"Sf6y6bFqdPiXt9qupmTdpJFJwBWmMCfs43",
+          "recipientId":"SkaPmhW8FwiZ1g64yEnyvcGRpY9ZyauPjz",
+          "senderPublicKey":"03e340952f7d726d8598b4ae68e88e583b39735c35b489559e082c705dba50376e",
+          "signature":"30440220141c637637bc40e14a5d49ada9257b487faff1061835c730325c05595fb7b582022065f8f0259baf41f49cba2b163b0d4934e12ca3a20239c36dce1e870bf9660cf7",
+          "asset":{},
+          "confirmations":935
+        },
+        ...
+      ],
+    "count":"132"
+  }
+]
+```
+
+`POST http://127.0.0.1:8282/{network}/transactions/{address}`

@@ -213,7 +213,7 @@ curl -X GET "http://127.0.0.1:8282/{network}/transactions/{address}"
 
 ```shell
 curl -X POST "http://127.0.0.1:8282/{network}/transaction" 
--d '{"recipientId":"{address}","amount":"{AmountInSatoshi}","passphrase":"{SenderAddressPassPhrase}"}'
+-d '{"recipientId":"<address>","amount":"<AmountInSatoshi>","passphrase":"<SenderAddressPassPhrase>"}'
 -H "Content-Type: application/json"
 ```
 
@@ -229,10 +229,11 @@ curl -X POST "http://127.0.0.1:8282/{network}/transaction"
         "amount":10000000,
         "fee":10000000,
         "recipientId":"Sa9JKodiNeM7tbYjxwEhvvG1kBczhQxTN3",
-        "timestamp":9165154,
+        "timestamp":9165933,
         "asset":{},
         "senderPublicKey":"03675c61dcc23eab75f9948c6510b54d34fced4a73d3c9f2132c76a29750e7a614",
-        "signature":"3045022100c68b707a3501181f06ad92ef99c62545288173a72775cf03ef0d2ec84a2112ac02200edd0d30f192992dfe0fd695c5ad3147044610c211ef395cf9fadd6314c064a1","id":"60a9760a2601662dfcce0c1a5cb656d61c9f3bc9d7adeb902f0153c8c9e05a16"
+        "signature":"304402201342810cdd2db452aff3b4c6367101a6973f40d7d4601647a8433c7bc547bde902202629f5fae8405097147edb8e10839d58dc56f1f154dfe3db3a3dcfd7acf4bdb9",
+        "id":"477c43012b1720de6f924918ad1ee7e41fc74ef5ed30ed628ea3af877ad203f1"
       }
   }
 ]
@@ -247,3 +248,39 @@ Example:
 <aside class="info">
 Note that if the transaction has been created via the RPC it has been stored internally, as such only the transaction id is needed to broadcast/rebroadcast it. Otherwise if created outside of this RPC server, pass the whole transaction body as the POST payload.
 </aside>
+
+## Broadcast transaction
+
+```shell
+curl -X POST "http://127.0.0.1:8282/{network}/broadcast" 
+-d '{"id":"<id of the transaction>"}'
+-H "Content-Type: application/json"
+```
+
+> RESPONSE
+
+```json
+[
+  {
+    "success":true,
+    "transaction":
+      {
+        "type":0,
+        "amount":10000000,
+        "fee":10000000,
+        "recipientId":"Sa9JKodiNeM7tbYjxwEhvvG1kBczhQxTN3",
+        "timestamp":9165933,
+        "asset":{},
+        "senderPublicKey":"03675c61dcc23eab75f9948c6510b54d34fced4a73d3c9f2132c76a29750e7a614",
+        "signature":"304402201342810cdd2db452aff3b4c6367101a6973f40d7d4601647a8433c7bc547bde902202629f5fae8405097147edb8e10839d58dc56f1f154dfe3db3a3dcfd7acf4bdb9",
+        "id":"477c43012b1720de6f924918ad1ee7e41fc74ef5ed30ed628ea3af877ad203f1"
+      }
+  }
+]
+```
+
+`POST http://127.0.0.1:8282/{network}/broadcast`
+
+Example: 
+
+`curl -X POST "http://127.0.01:8282/mainnet/broadcast" -H "accept: application/json" -H "content-type: application/json" -d '{"id":"477c43012b1720de6f924918ad1ee7e41fc74ef5ed30ed628ea3af877ad203f1"}'`

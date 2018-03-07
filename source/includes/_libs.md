@@ -17,6 +17,8 @@ npm install -g npm
 npm install forever -g
 npm install grunt-cli -g
 npm install
+
+forever start server.js
 ```
 
 How To Use It:
@@ -27,6 +29,12 @@ How To Use It:
 - install smartholdem-rpc: npm install
 - start RPC server: forever start server.js
 - stop RPC server: forever stop server.js
+
+### Accounts:
+
+Get account balance from address:
+
+`GET https://127.0.0.1:8081/mainnet/account/{address}`
 
 <aside class="warning">
 Security Warning! All calls should be made from the server where RPC is running at localhost or 127.0.0.1. The RPC server should never be publicly accessible.

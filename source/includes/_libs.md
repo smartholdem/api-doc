@@ -41,7 +41,7 @@ Get account balance from address:
 > Get account balance example
 
 ```shell
-curl -X GET "http://127.0.0.1:8282/mainnet/account/SUeGCt31AHwTZVcfZQwpPVL4jEUCtMMDTg" -H "accept: application/json" 
+curl -X GET "http://127.0.0.1:8282/mainnet/account/{address}" -H "accept: application/json" 
 ```
 
 > RESPONSE

@@ -1,4 +1,6 @@
 # RPC Daemon
+All calls should be made from the server where RPC is running at ( i.e., localhost or 127.0.0.1 ). The RPC server should never be publicly accessible. If you wish to access smartholdem-rpc from a remote address, you can whitelist the address with --allow <address>. Addresses allow you to use wildcards, eg. 192.168.1.* or 10.0.*.*.
+If you do want to allow access from all remotes, start smartholdem-rpc with the --allow-remote commandline switch. This can be dangerous.
 
 ## How To Use It
 This is an additional library. Works as a bitcoind.
@@ -33,7 +35,7 @@ forever start server.js
 Security Warning! All calls should be made from the server where RPC is running at localhost or 127.0.0.1. The RPC server should never be publicly accessible.
 </aside>
 
-## Get account balance from address:
+## Get account balance from address
 
 ```shell
 curl -X GET "http://127.0.0.1:8282/mainnet/account/{address}"
@@ -127,3 +129,20 @@ curl -X POST "http://127.0.0.1:8282/mainnet/account/bip38"
 Parameter | Type | Description
 --------- | ------- | -----------
 bip38 | string<br>(query) | secret passphrase
+
+## GET backup account from userid
+
+```shell
+curl -X GET "http://127.0.0.1:8282/{network}/account/bip38/{userid}"
+-H "accept: application/json" 
+```
+
+> RESPONSE Get account balance from address
+
+```json
+[
+  
+]
+```
+
+`http://127.0.0.1:8282/{network}/account/bip38/{userid}`

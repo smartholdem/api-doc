@@ -97,6 +97,8 @@ passphrase | string<br>(query) | secret passphrase
 
 ## Create/Get account from BIP38
 
+Create (or get if already existing) account and encrypt using bip38
+
 ```shell
 curl -X POST "http://127.0.0.1:8282/mainnet/account/bip38" 
 -d '{"bip38":"MasterPasswordBIP38"}'

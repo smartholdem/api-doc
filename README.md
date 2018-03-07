@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/smartholdem/api-doc.svg?branch=master)](https://travis-ci.org/smartholdem/api-doc)
-[![Build Status](https://img.shields.io/github/release/smartholdem/api-doc.svg)](https://travis-ci.org/smartholdem/api-doc)
+[![Build Status](https://img.shields.io/github/release/smartholdem/api-doc.svg)](https://github.com/smartholdem/api-doc/releases/latest)
 
 <p align="center">If you find an error in our documentation, please feel free to open up a github issue and we'll get it fixed as soon as possible.</p>
 

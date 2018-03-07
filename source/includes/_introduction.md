@@ -1,6 +1,10 @@
 # Introduction
 
-Welcome to the SmartHoldem API! You can use our API to access SmartHoldem API endpoints Node-A.
+Current version
+[![Build Status](https://travis-ci.org/smartholdem/api-doc.svg?branch=master)](https://travis-ci.org/smartholdem/api-doc)
+[![Release](https://img.shields.io/github/release/smartholdem/api-doc.svg)](https://github.com/smartholdem/api-doc/releases/latest)
+
+Welcome to the official documentation SmartHoldem API! You can use our API to access SmartHoldem API endpoints Node-A.
 
 We have language bindings in Shell, HTTP! 
 You can view code examples in the dark area to the right, 

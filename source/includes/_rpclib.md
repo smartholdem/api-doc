@@ -1,8 +1,12 @@
 # RPC Daemon
-All calls should be made from the server where RPC is running at ( i.e., localhost or 127.0.0.1 ). The RPC server should never be publicly accessible. If you wish to access smartholdem-rpc from a remote address, you can whitelist the address with --allow <address>. Addresses allow you to use wildcards, eg. 192.168.1.* or 10.0.*.*.
-If you do want to allow access from all remotes, start smartholdem-rpc with the --allow-remote commandline switch. This can be dangerous.
 
 ## How To Use It
+
+All calls should be made from the server where RPC is running at ( i.e., localhost or 127.0.0.1 ). 
+The RPC server should never be publicly accessible. 
+If you wish to access smartholdem-rpc from a remote address, you can whitelist the address with --allow <address>. 
+Addresses allow you to use wildcards, eg. 192.168.1.* or 10.0.*.*.
+If you do want to allow access from all remotes, start smartholdem-rpc with the --allow-remote commandline switch. This can be dangerous.
 This is an additional library. Works as a bitcoind.
 
 ```shell

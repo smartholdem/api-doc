@@ -3,11 +3,10 @@
 ## Get block by id
 
 ```shell
-curl -X GET "http://127.0.0.1/api/blocks/get?id={blockid}" 
+curl -X GET "http://127.0.0.1:6100/api/blocks/get?id={blockid}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
--H "port: 6100"
+-H "version: 0.0.2"
 ```
 
 ```http
@@ -63,11 +62,10 @@ port | integer<br>(header) | 6100
 ## Get all blocks
 
 ```shell
-curl -X GET "http://127.0.0.1/api/blocks?limit={limit}&orderBy={orderByFieldName}&offset={offset}" 
+curl -X GET "http://127.0.0.1:6100/api/blocks?limit={limit}&orderBy={orderByFieldName}&offset={offset}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
--H "port: 6100"
+-H "version: 0.0.2"
 ```
 
 ```http
@@ -152,11 +150,10 @@ port | integer<br>(header) | 6100
 ## Get the BlockChain Epoch
 
 ```shell
-curl -X GET "http://127.0.0.1/api/blocks/getEpoch" 
+curl -X GET "http://127.0.0.1:6100/api/blocks/getEpoch" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
--H "port: 6100"
 ```
 
 ```http
@@ -193,11 +190,10 @@ port | integer<br>(header) | 6100
 ## Get the BlockChain Height
 
 ```shell
-curl -X GET "http://127.0.0.1/api/blocks/getHeight" 
+curl -X GET "http://127.0.0.1:6100/api/blocks/getHeight" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
--H "port: 6100"
+-H "version: 0.0.2"
 ```
 
 ```http
@@ -235,9 +231,8 @@ port | integer<br>(header) | 6100
 ## Get the BlockChain NetHash
 
 ```shell
-curl -X GET "http://127.0.0.1/api/blocks/getNethash" 
--H "accept: application/json" 
--H "port: 6100"
+curl -X GET "http://127.0.0.1:6100/api/blocks/getNethash" 
+-H "accept: application/json"
 ```
 
 ```http
@@ -271,11 +266,10 @@ port | integer<br>(header) | 6100
 ## Get the Transaction Fee
 
 ```shell
-curl -X GET "http://127.0.0.1/api/blocks/getFee" 
+curl -X GET "http://127.0.0.1:6100/api/blocks/getFee" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
--H "port: 6100"
+-H "version: 0.0.2"
 ```
 
 ```http
@@ -313,11 +307,10 @@ port | integer<br>(header) | 6100
 ## Get the Network Fees
 
 ```shell
-curl -X GET "http://127.0.0.1/api/blocks/getFees" 
+curl -X GET "http://127.0.0.1:6100/api/blocks/getFees" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
--H "port: 6100"
+-H "version: 0.0.2"
 ```
 
 ```http
@@ -361,11 +354,10 @@ port | integer<br>(header) | 6100
 ## Get the BlockChain Milestone
 
 ```shell
-curl -X GET "http://127.0.0.1/api/blocks/getMilestone" 
+curl -X GET "http://127.0.0.1:6100/api/blocks/getMilestone" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
--H "port: 6100"
+-H "version: 0.0.2"
 ```
 
 ```http
@@ -402,11 +394,10 @@ port | integer<br>(header) | 6100
 ## Get the BlockChain Reward
 
 ```shell
-curl -X GET "http://127.0.0.1/api/blocks/getReward" 
+curl -X GET "http://127.0.0.1:6100/api/blocks/getReward" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
--H "port: 6100"
+-H "version: 0.0.2"
 ```
 
 ```http
@@ -443,11 +434,10 @@ port | integer<br>(header) | 6100
 ## Get the BlockChain Supply
 
 ```shell
-curl -X GET "http://127.0.0.1/api/blocks/getSupply" 
+curl -X GET "http://127.0.0.1:6100/api/blocks/getSupply" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
--H "port: 6100"
+-H "version: 0.0.2"
 ```
 
 ```http
@@ -484,11 +474,10 @@ port | integer<br>(header) | 6100
 ## Get the BlockChain Status
 
 ```shell
-curl -X GET "http://127.0.0.1/api/blocks/getStatus" 
+curl -X GET "http://127.0.0.1:6100/api/blocks/getStatus" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
--H "port: 6100"
+-H "version: 0.0.2"
 ```
 
 ```http

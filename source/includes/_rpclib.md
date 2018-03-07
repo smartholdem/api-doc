@@ -319,8 +319,8 @@ curl -X POST "http://127.0.0.1:8282/{network}/transaction/bip38"
 ]
 ```
 
-`POST http://127.0.0.1:8282/{network}/broadcast`
+`POST http://127.0.0.1:8282/{network}/transaction/bip38`
 
 Example: 
 
-`curl -X POST "http://127.0.01:8282/mainnet/broadcast" -H "accept: application/json" -H "content-type: application/json" -d '{"id":"477c43012b1720de6f924918ad1ee7e41fc74ef5ed30ed628ea3af877ad203f1"}'`
+`curl -H "Content-Type: application/json" -X POST "http://127.0.0.1:8081/mainnet/transaction/bip38" -d '{"recipientId":"Sa9JKodiNeM7tbYjxwEhvvG1kBczhQxTN3","amount":"10000000","bip38":"this is a test","userid":"superuser38""}'`

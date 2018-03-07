@@ -130,7 +130,8 @@ curl -X POST "http://127.0.0.1:8282/mainnet/account/bip38"
 
 Parameter | Type | Description
 --------- | ------- | -----------
-bip38 | string<br>(query) | secret passphrase
+bip38 | string<br>(query) | master password
+userid | string<br>(query) | any 32 byte username hex
 
 ## GET backup account from userid
 

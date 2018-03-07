@@ -1,5 +1,6 @@
 # RPC Daemon
 
+## How To Use It
 This is an additional library. Works as a bitcoind.
 
 ```shell
@@ -19,8 +20,6 @@ npm install
 forever start server.js
 ```
 
-How To Use It:
-
 - install Node.JS
 - install forever npm install -g forever
 - git clone https://github.com/smartholdem/smartholdem-rpc.git
@@ -29,8 +28,6 @@ How To Use It:
 - stop RPC server: forever stop server.js
 
 default port 8282
-
-## Accounts:
 
 ## Get account balance from address:
 

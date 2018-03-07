@@ -68,16 +68,6 @@ curl -X GET "http://127.0.0.1:8282/mainnet/account/{address}"
 
 ## Create account from Pass Phrase:
 
-`POST http://127.0.0.1:8282/mainnet/account`
-
-### Query Parameters
-
-Parameter | Type | Description
---------- | ------- | -----------
-passphrase | string<br>(query) | secret passphrase
-
-> Create account from Pass Phrase
-
 ```shell
 curl -X POST "http://127.0.0.1:8282/mainnet/account" 
 -d '{"passphrase":"TestPassWord"}'
@@ -99,4 +89,10 @@ curl -X POST "http://127.0.0.1:8282/mainnet/account"
 ]
 ```
 
+`POST http://127.0.0.1:8282/mainnet/account`
 
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+passphrase | string<br>(query) | secret passphrase

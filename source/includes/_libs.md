@@ -67,6 +67,33 @@ curl -X GET "http://127.0.0.1:8282/mainnet/account/{address}"
 ]
 ```
 
+#### Create account from Pass Phrase:
+
+`POST https://127.0.0.1:8282/mainnet/account`
+
+> Create account from Pass Phrase
+
+```shell
+curl -X POST "http://127.0.0.1:8282/mainnet/account" 
+-d '{"passphrase":"TestPassWord"}'
+-H "Content-Type: application/json"
+```
+
+> RESPONSE Create account from Pass Phrase
+
+```json
+[
+ {
+  "success":true,
+  "account":
+    {
+      "publicKey":"02f83b9419d8edbaeb095e05eba4c1685c25443bbf848125392960f38b315b6eb0",
+      "address":"ScXk96ma9D1m2w7bFbNUKx1yjbWCCEYMY5"
+    }
+ }
+]
+```
+
 <aside class="warning">
 Security Warning! All calls should be made from the server where RPC is running at localhost or 127.0.0.1. The RPC server should never be publicly accessible.
 </aside>

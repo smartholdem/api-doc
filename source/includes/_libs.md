@@ -1,4 +1,0 @@
-# Libraries
-
-Additional Libraries
-

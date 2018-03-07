@@ -34,7 +34,12 @@ How To Use It:
 
 Get account balance from address:
 
-`GET https://127.0.0.1:8081/mainnet/account/{address}`
+`GET https://127.0.0.1:8080/mainnet/account/{address}`
+
+```shell
+curl -X GET "http://127.0.0.1:8080/mainnet/account/{address}" 
+-H "accept: application/json" 
+```
 
 <aside class="warning">
 Security Warning! All calls should be made from the server where RPC is running at localhost or 127.0.0.1. The RPC server should never be publicly accessible.

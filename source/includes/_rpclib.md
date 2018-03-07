@@ -107,7 +107,7 @@ Create (or get if already existing) account and encrypt using bip38
 
 ```shell
 curl -X POST "http://127.0.0.1:8282/mainnet/account/bip38" 
--d '{"bip38":"MasterPasswordBIP38"}'
+-d '{"bip38":"MasterPasswordBIP38", "userid":"useridstring32"}'
 -H "Content-Type: application/json"
 ```
 
@@ -115,14 +115,12 @@ curl -X POST "http://127.0.0.1:8282/mainnet/account/bip38"
 
 ```json
 [
- {
-  "success":true,
-  "account":
-    {
-      "publicKey":"02d06c53671dfbc127bec00c830e93254730a481e495c7df14fb5f298d318d40c3",
-      "address":"SeB3TheKxk6dqxV48ZTtWBct88BZhhAc9E"
-    }
- }
+  {
+    "success":true,
+    "publicKey":"0371a0038eebac8f7e47e0bd10128a3dbe951d96bb09560cf972c05c31edb1cc2e",
+    "address":"SWSbAHmCrovRfMzQwkuhMoymMPXDZBw5jx",
+    "wif":"6PYR6wexqVbcfGjUo6gKKW7nYaVowVo3qSDXjXRsLTBDWTepH22kbLMsJT"
+  }
 ]
 ```
 

@@ -153,7 +153,7 @@ curl -X GET "http://127.0.0.1:8282/{network}/account/bip38/{userid}"
 ]
 ```
 
-`POST http://127.0.0.1:8282/{network}/account/bip38`
+`GET http://127.0.0.1:8282/{network}/account/bip38`
 
 ## Get last transactions from address
 
@@ -207,4 +207,39 @@ curl -X GET "http://127.0.0.1:8282/{network}/transactions/{address}"
 ]
 ```
 
-`POST http://127.0.0.1:8282/{network}/transactions/{address}`
+`GET http://127.0.0.1:8282/{network}/transactions/{address}`
+
+## Create a transaction
+
+```shell
+curl -X POST "http://127.0.0.1:8282/{network}/transaction" 
+-d '{"recipientId":"{address}","amount":"{AmountInSatoshi}","passphrase":"{SenderAddressPassPhrase}"}'
+-H "Content-Type: application/json"
+```
+
+> RESPONSE
+
+```json
+[
+  {
+    "success":true,
+    "transaction":
+      {
+        "type":0,
+        "amount":10000000,
+        "fee":10000000,
+        "recipientId":"Sa9JKodiNeM7tbYjxwEhvvG1kBczhQxTN3",
+        "timestamp":9165154,
+        "asset":{},
+        "senderPublicKey":"03675c61dcc23eab75f9948c6510b54d34fced4a73d3c9f2132c76a29750e7a614",
+        "signature":"3045022100c68b707a3501181f06ad92ef99c62545288173a72775cf03ef0d2ec84a2112ac02200edd0d30f192992dfe0fd695c5ad3147044610c211ef395cf9fadd6314c064a1","id":"60a9760a2601662dfcce0c1a5cb656d61c9f3bc9d7adeb902f0153c8c9e05a16"
+      }
+  }
+]
+```
+
+`POST http://127.0.0.1:8282/{network}/transaction`
+
+Example:
+
+`curl -H "Content-Type: application/json" -X POST "http://127.0.0.1:8081/mainnet/transaction" -d '{"recipientId":"Sa9JKodiNeM7tbYjxwEhvvG1kBczhQxTN3","amount":"10000000","passphrase":"this is a test"}'`

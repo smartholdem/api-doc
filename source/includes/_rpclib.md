@@ -126,17 +126,16 @@ curl -X POST "http://127.0.0.1:8282/mainnet/account/bip38"
 
 `POST http://127.0.0.1:8282/mainnet/account/bip38`
 
-<aside class="info">
-If you want to create several accounts for one user, you need to use a different userid.
-</aside>
-
-
 ### Query Parameters
 
 Parameter | Type | Description
 --------- | ------- | -----------
 bip38 | string<br>(query) | master password
 userid | string<br>(query) | any username
+
+<aside class="info">
+If you want to create several accounts for one user, you need to use a different userid.
+</aside>
 
 ## GET backup account from userid
 

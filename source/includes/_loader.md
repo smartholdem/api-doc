@@ -1,6 +1,6 @@
 # Loader
 
-## Get the BlockChain Status
+## Get the BlockChain Status Load
 
 ```shell
 curl -X GET "http://127.0.0.1/api/loader/status" 

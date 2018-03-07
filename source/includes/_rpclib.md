@@ -126,6 +126,11 @@ curl -X POST "http://127.0.0.1:8282/mainnet/account/bip38"
 
 `POST http://127.0.0.1:8282/mainnet/account/bip38`
 
+<aside class="info">
+If you want to create several accounts for one user, you need to use a different userid.
+</aside>
+
+
 ### Query Parameters
 
 Parameter | Type | Description
@@ -254,6 +259,42 @@ Note that if the transaction has been created via the RPC it has been stored int
 ```shell
 curl -X POST "http://127.0.0.1:8282/{network}/broadcast" 
 -d '{"id":"<id of the transaction>"}'
+-H "Content-Type: application/json"
+```
+
+> RESPONSE
+
+```json
+[
+  {
+    "success":true,
+    "transaction":
+      {
+        "type":0,
+        "amount":10000000,
+        "fee":10000000,
+        "recipientId":"Sa9JKodiNeM7tbYjxwEhvvG1kBczhQxTN3",
+        "timestamp":9165933,
+        "asset":{},
+        "senderPublicKey":"03675c61dcc23eab75f9948c6510b54d34fced4a73d3c9f2132c76a29750e7a614",
+        "signature":"304402201342810cdd2db452aff3b4c6367101a6973f40d7d4601647a8433c7bc547bde902202629f5fae8405097147edb8e10839d58dc56f1f154dfe3db3a3dcfd7acf4bdb9",
+        "id":"477c43012b1720de6f924918ad1ee7e41fc74ef5ed30ed628ea3af877ad203f1"
+      }
+  }
+]
+```
+
+`POST http://127.0.0.1:8282/{network}/broadcast`
+
+Example: 
+
+`curl -X POST "http://127.0.01:8282/mainnet/broadcast" -H "accept: application/json" -H "content-type: application/json" -d '{"id":"477c43012b1720de6f924918ad1ee7e41fc74ef5ed30ed628ea3af877ad203f1"}'`
+
+## Create a transaction using bip38
+
+```shell
+curl -X POST "http://127.0.0.1:8282/{network}/transaction/bip38" 
+-d '{"recipientId":"<recipientId>","amount":"<in satoshis>","bip38":"<password to encode wif>","userid":"<useridBip38>"}'
 -H "Content-Type: application/json"
 ```
 

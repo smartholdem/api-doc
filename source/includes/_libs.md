@@ -38,7 +38,7 @@ Get account balance from address:
 
 `GET https://127.0.0.1:8282/mainnet/account/{address}`
 
-> Get account balance example
+> Get account balance
 
 ```shell
 curl -X GET "http://127.0.0.1:8282/mainnet/account/{address}" -H "accept: application/json" 

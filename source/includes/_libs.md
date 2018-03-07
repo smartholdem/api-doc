@@ -13,3 +13,6 @@ How To Use It:
 - start RPC server: forever start server.js
 - stop RPC server: forever stop server.js
 
+<aside class="warning">
+Security Warning! All calls should be made from the server where RPC is running at localhost or 127.0.0.1. The RPC server should never be publicly accessible.
+</aside>

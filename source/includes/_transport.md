@@ -93,7 +93,7 @@ nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff
 version | string<br>(header) | 0.0.2
 port | integer<br>(header) | 6100
 
-## Get the BlockChain status
+## Get the status
 
 ```shell
 curl -X GET "http://127.0.0.1:6100/peer/status" 

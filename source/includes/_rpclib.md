@@ -1,4 +1,4 @@
-## RPC Daemon
+# RPC Daemon
 
 This is an additional library. Works as a bitcoind.
 
@@ -30,9 +30,9 @@ How To Use It:
 
 default port 8282
 
-### Accounts:
+## Accounts:
 
-#### Get account balance from address:
+## Get account balance from address:
 
 `GET https://127.0.0.1:8282/mainnet/account/{address}`
 
@@ -65,7 +65,7 @@ curl -X GET "http://127.0.0.1:8282/mainnet/account/{address}"
 ]
 ```
 
-#### Create account from Pass Phrase:
+## Create account from Pass Phrase:
 
 `POST https://127.0.0.1:8282/mainnet/account`
 

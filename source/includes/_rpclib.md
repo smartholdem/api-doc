@@ -103,7 +103,7 @@ curl -X POST "http://127.0.0.1:8282/mainnet/account/bip38"
 -H "Content-Type: application/json"
 ```
 
-> RESPONSE Create account from Pass Phrase
+> RESPONSE
 
 ```json
 [

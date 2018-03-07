@@ -64,7 +64,7 @@ curl -X GET "http://127.0.0.1:8282/mainnet/account/{address}"
 
 `GET http://127.0.0.1:8282/mainnet/account/{address}`
 
-## Create account from Pass Phrase:
+## Create account from Pass Phrase
 
 ```shell
 curl -X POST "http://127.0.0.1:8282/mainnet/account" 
@@ -94,3 +94,34 @@ curl -X POST "http://127.0.0.1:8282/mainnet/account"
 Parameter | Type | Description
 --------- | ------- | -----------
 passphrase | string<br>(query) | secret passphrase
+
+## Create/Get account from BIP38
+
+```shell
+curl -X POST "http://127.0.0.1:8282/mainnet/account/bip38" 
+-d '{"bip38":"MasterPasswordBIP38"}'
+-H "Content-Type: application/json"
+```
+
+> RESPONSE Create account from Pass Phrase
+
+```json
+[
+ {
+  "success":true,
+  "account":
+    {
+      "publicKey":"02d06c53671dfbc127bec00c830e93254730a481e495c7df14fb5f298d318d40c3",
+      "address":"SeB3TheKxk6dqxV48ZTtWBct88BZhhAc9E"
+    }
+ }
+]
+```
+
+`POST http://127.0.0.1:8282/mainnet/account/bip38`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+bip38 | string<br>(query) | secret passphrase

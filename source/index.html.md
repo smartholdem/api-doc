@@ -20,8 +20,8 @@ includes:
   - loader
   - peer
   - transport
-  - errors
   - libs
+  - errors
 
 search: true
 ---

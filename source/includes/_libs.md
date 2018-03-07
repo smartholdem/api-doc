@@ -34,7 +34,7 @@ default port 8282
 
 ### Accounts:
 
-Get account balance from address:
+#### Get account balance from address:
 
 `GET https://127.0.0.1:8282/mainnet/account/{address}`
 

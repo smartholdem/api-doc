@@ -35,7 +35,7 @@ Security Warning! All calls should be made from the server where RPC is running 
 
 ## Get account balance from address:
 
-`GET https://127.0.0.1:8282/mainnet/account/{address}`
+`GET http://127.0.0.1:8282/mainnet/account/{address}`
 
 > Get account balance
 
@@ -68,7 +68,13 @@ curl -X GET "http://127.0.0.1:8282/mainnet/account/{address}"
 
 ## Create account from Pass Phrase:
 
-`POST https://127.0.0.1:8282/mainnet/account`
+`POST http://127.0.0.1:8282/mainnet/account`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+passphrase | string<br>(query) | secret passphrase
 
 > Create account from Pass Phrase
 

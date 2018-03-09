@@ -324,3 +324,7 @@ curl -X POST "http://127.0.0.1:8282/{network}/transaction/bip38"
 Example: 
 
 `curl -H "Content-Type: application/json" -X POST "http://127.0.0.1:8081/mainnet/transaction/bip38" -d '{"recipientId":"Sa9JKodiNeM7tbYjxwEhvvG1kBczhQxTN3","amount":"10000000","bip38":"this is a test","userid":"superuser38""}'`
+
+<aside class="info">
+Note that if the transaction has been created via the RPC it has been stored internally, as such only the transaction id is needed to broadcast/rebroadcast it. Otherwise if created outside of this RPC server, pass the whole transaction body as the POST payload.
+</aside>

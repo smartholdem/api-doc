@@ -208,3 +208,50 @@ Parameter | Type | Description
 nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
 version | string<br>(header) | 0.0.2
 port | integer<br>(header) | 6100
+
+## Broadcast a new transaction
+
+```shell
+curl -X POST "http://127.0.0.1:6100/peer/transactions"
+-d '{"transactions":[<A valid transactions object>]}' 
+-H "accept: application/json" 
+-H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
+-H "version: 0.0.2" 
+-H "port: 6100"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "success":true,
+    "transaction":
+      {
+        "type":0,
+        "amount":10000000,
+        "fee":10000000,
+        "recipientId":"Sa9JKodiNeM7tbYjxwEhvvG1kBczhQxTN3",
+        "timestamp":9165933,
+        "asset":{},
+        "senderPublicKey":"03675c61dcc23eab75f9948c6510b54d34fced4a73d3c9f2132c76a29750e7a614",
+        "signature":"304402201342810cdd2db452aff3b4c6367101a6973f40d7d4601647a8433c7bc547bde902202629f5fae8405097147edb8e10839d58dc56f1f154dfe3db3a3dcfd7acf4bdb9",
+        "id":"477c43012b1720de6f924918ad1ee7e41fc74ef5ed30ed628ea3af877ad203f1"
+      }
+  }
+]
+```
+
+JSON Response
+
+### HTTP Request
+
+`POST http://127.0.0.1:6100/peer/transactions`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+transactions | string<br>(header) | A valid transaction object
+version | string<br>(header) | 0.0.2
+port | integer<br>(header) | 6100

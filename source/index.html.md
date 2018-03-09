@@ -22,6 +22,7 @@ includes:
   - transport
   - rpclib
   - errors
+  - models
 
 search: true
 ---

@@ -54,3 +54,11 @@ Parameter | Type | Description
 --------- | ------- | -----------
 transactions* | [object] | A transaction object that should be processed.
 
+## Accounts GetBalanceResponse
+
+Parameter | Type | Description
+--------- | ------- | -----------
+success | boolean | Indicates whether or not errors occurred
+balance | integer | is usually equal to unconfirmedBalance
+unconfirmedBalance | integer |  is usually equal to balance
+

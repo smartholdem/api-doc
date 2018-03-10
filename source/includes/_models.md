@@ -26,5 +26,5 @@ publicKey* | string | A valid account Public Key.
 secondSecret | string | A valid secondary account Passphrase.
 min* | integer | min sugnatures (min 1 - max 16)
 lifetime* | integer | min 1 - max 72
-keysgroup* | array [string] | length 1 - 10
+keysgroup* | array [string] | A list of public keys. length 1 - 10
 

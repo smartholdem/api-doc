@@ -69,3 +69,26 @@ Parameter | Type | Description
 success | boolean | Indicates whether or not errors occurred
 publicKey | string | A valid SmartHoldem Public Key.
 
+## Accounts GetDelegatesFeeResponse
+
+Parameter | Type | Description
+--------- | ------- | -----------
+success | boolean | Indicates whether or not errors occurred
+fee | integer | 
+
+## Accounts GetDelegatesResponse
+
+Parameter | Type | Description
+--------- | ------- | -----------
+success | boolean | Indicates whether or not errors occurred
+delegates | object | delegate
+ delegate.username | string |
+ delegate.address | string |
+ delegate.publicKey | string |
+ delegate.vote | string |
+ delegate.producedblocks | integer |
+ delegate.missedblocks | integer |
+ delegate.rate | integer |
+ delegate.approval | number |
+ delegate.productivity | number |
+

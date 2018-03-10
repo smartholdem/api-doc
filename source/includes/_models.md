@@ -62,3 +62,10 @@ success | boolean | Indicates whether or not errors occurred
 balance | integer | is usually equal to unconfirmedBalance
 unconfirmedBalance | integer |  is usually equal to balance
 
+## Accounts GetPublickeyResponse
+
+Parameter | Type | Description
+--------- | ------- | -----------
+success | boolean | Indicates whether or not errors occurred
+publicKey | string | A valid SmartHoldem Public Key.
+

@@ -1,6 +1,5 @@
 # Introduction
 
-Current version
 [![Build Status](https://travis-ci.org/smartholdem/api-doc.svg?branch=master)](https://travis-ci.org/smartholdem/api-doc)
 [![Release](https://img.shields.io/github/release/smartholdem/api-doc.svg)](https://github.com/smartholdem/api-doc/releases/latest)
 

@@ -1,8 +1,8 @@
 # RPC Daemon
 
-[![Build Status](https://travis-ci.org/smartholdem/smartholdem-rpc.svg?branch=master)](https://travis-ci.org/smartholdem/smartholdem-rpc)
-
 ## How To Use It
+
+[![Build Status](https://travis-ci.org/smartholdem/smartholdem-rpc.svg?branch=master)](https://travis-ci.org/smartholdem/smartholdem-rpc)
 
 All calls should be made from the server where RPC is running at ( i.e., localhost or 127.0.0.1 ). 
 The RPC server should never be publicly accessible. 

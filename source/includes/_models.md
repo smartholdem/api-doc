@@ -48,3 +48,9 @@ recipientId* | string | A valid SmartHoldem Address.
 publicKey* | string | A valid account Public Key.
 multisigAccountPublicKey* | string | A valid multi signature SmartHoldem Public Key.
 
+## Transport AddTransactionsRequest
+
+Parameter | Type | Description
+--------- | ------- | -----------
+transactions* | [object] | A transaction object that should be processed.
+

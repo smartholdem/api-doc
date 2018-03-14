@@ -10,7 +10,9 @@ You can view code examples in the dark area to the right,
 and you can switch the programming language of the examples with the tabs in the top right.
 
 
-To connect to the api, use the link to your node: <code>http://127.0.0.1:6100/api/</code>
+connect to the mainnet api, use the link to your node: <code>http://127.0.0.1:6100/api/</code>
+
+connect to the testnet api, use the link to your node: <code>http://127.0.0.1:4100/api/</code>
 
 parameter | type | request | mainnet  
 --------- | ------- | ----------- | ----------- 

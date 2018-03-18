@@ -3,7 +3,7 @@
 ## Get the BlockChain Status Load
 
 ```shell
-curl -X GET "http://127.0.0.1/api/loader/status" 
+curl -X GET "http://127.0.0.1:6100/api/loader/status" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -46,7 +46,7 @@ port | integer<br>(header) | 6100
 ## Get the synchronisation status of the client
 
 ```shell
-curl -X GET "http://127.0.0.1/api/loader/status/sync" 
+curl -X GET "http://127.0.0.1:6100/api/loader/status/sync" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -90,7 +90,7 @@ port | integer<br>(header) | 6100
 ## Auto-configure the client loader
 
 ```shell
-curl -X GET "http://127.0.0.1/api/loader/autoconfigure" 
+curl -X GET "http://127.0.0.1:6100/api/loader/autoconfigure" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 

@@ -3,7 +3,7 @@
 ## Get the count of delegates
 
 ```shell
-curl -X GET "http://127.0.0.1/api/delegates/count" 
+curl -X GET "http://127.0.0.1:6100/api/delegates/count" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -44,7 +44,7 @@ port | integer<br>(header) | 6100
 ## Search for specific delegates
 
 ```shell
-curl -X GET "http://127.0.0.1/api/delegates/search?q={DelegateName}" 
+curl -X GET "http://127.0.0.1:6100/api/delegates/search?q={DelegateName}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -97,7 +97,7 @@ port | integer<br>(header) | 6100
 ## Get a list of voters for a delegate
 
 ```shell
-curl -X GET "http://127.0.0.1/api/delegates/voters?publicKey={publicKey}" 
+curl -X GET "http://127.0.0.1:6100/api/delegates/voters?publicKey={publicKey}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -153,7 +153,7 @@ port | integer<br>(header) | 6100
 ## Get a single delegate
 
 ```shell
-curl -X GET "http://127.0.0.1/api/delegates/get?publicKey={publicKey}" 
+curl -X GET "http://127.0.0.1:6100/api/delegates/get?publicKey={publicKey}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -206,7 +206,7 @@ port | integer<br>(header) | 6100
 ## Get all delegates
 
 ```shell
-curl -X GET "http://127.0.0.1/api/delegates?limit={limit}&offset={offset}" 
+curl -X GET "http://127.0.0.1:6100/api/delegates?limit={limit}&offset={offset}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -275,7 +275,7 @@ port | integer<br>(header) | 6100
 ## Get the delegate fee
 
 ```shell
-curl -X GET "http://127.0.0.1/api/delegates/fee" 
+curl -X GET "http://127.0.0.1:6100/api/delegates/fee" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -316,7 +316,7 @@ port | integer<br>(header) | 6100
 ## Get the amount of forged by an account
 
 ```shell
-curl -X GET "http://127.0.0.1/api/delegates/forging/getForgedByAccount?generatorPublicKey={generatorPublicKey}" 
+curl -X GET "http://127.0.0.1:6100/api/delegates/forging/getForgedByAccount?generatorPublicKey={generatorPublicKey}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -360,7 +360,7 @@ port | integer<br>(header) | 6100
 ## Get the next forger
 
 ```shell
-curl -X GET "http://127.0.0.1/api/delegates/getNextForgers?address={address}" 
+curl -X GET "http://127.0.0.1:6100/api/delegates/getNextForgers?address={address}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 

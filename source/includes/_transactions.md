@@ -3,7 +3,7 @@
 ## Send Transaction
 
 ```shell
-curl -k -X PUT "http://127.0.0.1/api/transactions"
+curl -k -X PUT "http://127.0.0.1:6100/api/transactions"
 -d '{"secret":"<AddressSecretPassphrase>","amount":<Amount>,"recipientId":"<RecipientAddress>"}' 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
@@ -53,7 +53,7 @@ port | integer<br>(header) | 6100
 ## Get a single transaction
 
 ```shell
-curl -X GET "http://127.0.0.1/api/transactions/get?id={TxID}" 
+curl -X GET "http://127.0.0.1:6100/api/transactions/get?id={TxID}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -110,7 +110,7 @@ port | integer<br>(header) | 6100
 ## Get all transactions
 
 ```shell
-curl -X GET "http://127.0.0.1/api/transactions?limit={limit}&offset={offset}" 
+curl -X GET "http://127.0.0.1:6100/api/transactions?limit={limit}&offset={offset}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -194,7 +194,7 @@ port | integer<br>(header) | 6100
 ## Get all unconfirmed transactions
 
 ```shell
-curl -X GET "http://127.0.0.1/api/transactions/unconfirmed" 
+curl -X GET "http://127.0.0.1:6100/api/transactions/unconfirmed" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 

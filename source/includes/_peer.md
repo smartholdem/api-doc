@@ -3,7 +3,7 @@
 ## Get a single peer
 
 ```shell
-curl -X GET "http://127.0.0.1/api/peers/get?ip={IP}&port={Port}" 
+curl -X GET "http://127.0.0.1:6100/api/peers/get?ip={IP}&port={Port}" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 
@@ -113,7 +113,7 @@ port | integer<br>(header) | 6100
 ## Get the peer version
 
 ```shell
-curl -X GET "http://127.0.0.1/api/peers/version" 
+curl -X GET "http://127.0.0.1:6100/api/peers/version" 
 -H "accept: application/json" 
 -H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
 -H "version: 0.0.2" 

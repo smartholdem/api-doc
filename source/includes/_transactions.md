@@ -3,12 +3,9 @@
 ## Send Transaction
 
 ```shell
-curl -k -X PUT "http://127.0.0.1:6100/api/transactions"
+curl -k -H "Content-Type: application/json" -X PUT 
 -d '{"secret":"<AddressSecretPassphrase>","amount":<Amount>,"recipientId":"<RecipientAddress>"}' 
--H "accept: application/json" 
--H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
--H "port: 6100"
+http://127.0.0.1:6100/api/transactions
 ```
 
 ```http

@@ -104,3 +104,7 @@ Congratulations, the transaction is processed, the operation is completed.
 The example does not pretend to the quality of the code, it is intended for a basic understanding of receiving payments.
 </aside>
 
+## Send Tx
+
+A simple PHP example of sending transactions.
+

@@ -134,3 +134,7 @@ curl_close($ch);
 $result = json_decode($response, true); //convert to array
 print_r($result); //show result
 ```
+
+<aside class="warning">
+Attention! Send non-encrypted data to a trusted node.
+</aside>

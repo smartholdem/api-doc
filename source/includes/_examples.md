@@ -104,7 +104,33 @@ Congratulations, the transaction is processed, the operation is completed.
 The example does not pretend to the quality of the code, it is intended for a basic understanding of receiving payments.
 </aside>
 
-## Send Tx
+## Send Tx PHP
 
 A simple PHP example of sending transactions.
 
+```php
+<?php
+$url = 'http://node_ip:6100/api/transactions';
+$data = json_encode((object) array(
+            "secret" => "sender address secret pass phrase",
+            "amount" => 10000000, //0.1 STH in Satoshi
+            "recipientId" => "Sa9JKodiNeM7tbYjxwEhvvG1kBczhQxTN3", //recipient address
+            "vendorField" => "any message" // optional
+        ));
+
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type: application/json'));
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+$response = curl_exec($ch);
+curl_close($ch);
+
+$result = json_decode($response, true); //convert to array
+print_r($result); //show result
+```

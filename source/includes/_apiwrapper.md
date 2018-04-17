@@ -1,1 +1,1 @@
-# SmartHoldem API Wrapper
+# SmartHoldem JS API Wrapper

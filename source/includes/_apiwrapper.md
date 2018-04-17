@@ -2,6 +2,8 @@
 
 ## Installation
 
+https://github.com/smartholdem/sthjs-wrapper
+
 ```shell
 # install
 npm install https://github.com/smartholdem/sthjs-wrapper --save

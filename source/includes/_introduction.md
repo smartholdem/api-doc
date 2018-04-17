@@ -20,7 +20,6 @@ nethash | string | header | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790
 port | integer | header | 6100
 
 
-parameter | type | request | testnet
+parameter | type | request | devnet
 --------- | ------- | ----------- | -----------
-nethash | string | header | e1882350a56f22a79d62b903dc2d0fc03c6aae88c6f09908ee3e2d6f1da7e2b3
-port | integer | header | 4100
+port | integer | header | 6101

@@ -607,10 +607,11 @@ smartholdemApi.getTransactionsList(parameters, (error, success, response) => {
 }
 ```
 
-### Get transaction
+## Get transaction
 Transaction matched by id.
 
-**Request**
+> **Request**
+
 ```js
 var smartholdemApi = require("sth-api");
 smartholdemApi.getTransaction("String of transaction (String)", (error, success, response) => {
@@ -618,8 +619,9 @@ smartholdemApi.getTransaction("String of transaction (String)", (error, success,
 });
 ```
 
-**Response**
-```
+> **Response**
+
+```json
 {
   "success": true,
   "transaction": {Transaction Object}

@@ -3,7 +3,7 @@
 ## Installation
 
 ```shell
-// install
+# install
 npm install https://github.com/smartholdem/sthjs-wrapper --save
 ```
 

@@ -22,4 +22,7 @@ port | integer | header | 6100
 
 parameter | type | request | devnet
 --------- | ------- | ----------- | -----------
+nethash | string | header | 3a6d2bec6798dedea99a1e6c64120a3876781b85e46bb75908aba07ffda61360
 port | integer | header | 6101
+addr version | integer | - | 30
+slip 44 | integer | - | 1

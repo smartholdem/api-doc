@@ -559,10 +559,11 @@ var transaction = smartholdemApi.sendTransactions([Transactions array], (error, 
 }
 ```
 
-### Get list of transactions
+## Get list of transactions
 Transactions list matched by provided parameters.
 
-**Request**
+> **Request**
+
 ```js
 var smartholdemApi = require("sth-api");
 
@@ -580,8 +581,9 @@ smartholdemApi.getTransactionsList(parameters, (error, success, response) => {
 });
 ```
 
-**Response**
-```
+> **Response**
+
+```json
 {
   "success": true,
   "transactions": [

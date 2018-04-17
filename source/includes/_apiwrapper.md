@@ -628,10 +628,11 @@ smartholdemApi.getTransaction("String of transaction (String)", (error, success,
 }
 ```
 
-### Get unconfirmed transaction
+## Get unconfirmed transaction
 Get unconfirmed transaction by id.
 
-**Request**
+> **Request**
+
 ```js
 var smartholdemApi = require("sth-api");
 smartholdemApi.getUnconfirmedTransaction("String of transaction (String)", (error, success, response) => {
@@ -639,18 +640,20 @@ smartholdemApi.getUnconfirmedTransaction("String of transaction (String)", (erro
 });
 ```
 
-**Response**
-```
+> **Response**
+
+```json
 {
   "success": true,
   "transaction": {Transaction Object}
 }
 ```
 
-### Get list of unconfirmed transactions
+## Get list of unconfirmed transactions
 Get list of unconfirmed transactions.
 
-**Request**
+> **Request**
+
 ```js
 var smartholdemApi = require("sth-api");
 smartholdemApi.getUnconfirmedTransactions((error, success, response) => {
@@ -658,8 +661,9 @@ smartholdemApi.getUnconfirmedTransactions((error, success, response) => {
 });
 ```
 
-**Response**
-```
+> **Response**
+
+```json
 {
     "success" : true,
     "transactions" : [list of transaction objects]

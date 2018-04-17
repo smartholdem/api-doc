@@ -4,6 +4,7 @@ title: API Reference
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
   - http
+  - js
 
 toc_footers:
   - <a href='https://smartholdem.io'>SmartHoldem</a>

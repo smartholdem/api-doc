@@ -18,7 +18,7 @@ var network = "main" //or "dev"
 smartholdemApi.init(network);
 ```
 
-## API Accounts
+## -- JS Accounts --
 Account related API calls.
 
 ## Get balance
@@ -129,7 +129,7 @@ smartholdemApi.getVotes("Address of the account", (error, success, response) => 
 }
 ```
 
-## Blocks
+## -- JS Blocks --
 Blocks manage API.
 
 ## Get block

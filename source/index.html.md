@@ -20,6 +20,7 @@ includes:
   - loader
   - peer
   - transport
+  - apiwrapper
   - examples
   - rpclib
   - errors

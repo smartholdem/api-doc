@@ -390,3 +390,4 @@ smartholdemApi.getVoters("Public key of delegate. (String)", (error, success, re
   "accounts": [array of accounts who voted for delegate]
 }
 ```
+

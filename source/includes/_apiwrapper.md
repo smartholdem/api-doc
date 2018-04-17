@@ -520,10 +520,11 @@ var transaction = smartholdemApi.createSecondSignatureTransaction("Passphrase",
 console.log(transaction);
 ```
 
-### Create Vote Transaction
+## Create Vote Transaction
 Creates a vote transaction to be sent
 
-**Example**
+> **Example**
+
 ```js
 var smartholdemApi = require("sth-api");
 var transaction = smartholdemApi.createVoteTransaction("Passphrase",
@@ -532,10 +533,11 @@ var transaction = smartholdemApi.createVoteTransaction("Passphrase",
 console.log(transaction);
 ```
 
-### Send transactions
+## Send transactions
 Broadcasts an array of transactions to multiple nodes
 
-**Example**
+> **Example**
+
 ```js
 var smartholdemApi = require("sth-api");
 var transaction = smartholdemApi.sendTransactions([Transactions array], (error, success, response) => {
@@ -543,8 +545,9 @@ var transaction = smartholdemApi.sendTransactions([Transactions array], (error, 
 });
 ```
 
-**Response**
-```js
+> **Response**
+
+```json
 {
     success: true,
     transactionIds: [

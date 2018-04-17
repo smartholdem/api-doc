@@ -337,8 +337,9 @@ smartholdemApi.getNextForgers((error, success, response) => {
 });
 ```
 
-**Response**
-```
+> **Response**
+
+```json
 {
   "success": true,
   "currentBlock": Current block height (Integer),
@@ -348,10 +349,11 @@ smartholdemApi.getNextForgers((error, success, response) => {
 ```
 
 
-### Get votes of account
+## Get votes of account
 Get votes by account address.
 
-**Request**
+> **Request**
+
 ```js
 var smartholdemApi = require("sth-api");
 smartholdemApi.getVotes("Address of the account. (String)", (error, success, response) => {
@@ -359,18 +361,20 @@ smartholdemApi.getVotes("Address of the account. (String)", (error, success, res
 });
 ```
 
-**Response**
-```
+> **Response**
+
+```json
 {
   "success": true,
   "delegates": [array of delegates]
 }
 ```
 
-### Get voters
+## Get voters
 Get voters of delegate.
 
-**Request**
+> **Request**
+
 ```js
 var smartholdemApi = require("sth-api");
 smartholdemApi.getVoters("Public key of delegate. (String)", (error, success, response) => {
@@ -378,8 +382,9 @@ smartholdemApi.getVoters("Public key of delegate. (String)", (error, success, re
 });
 ```
 
-**Response**
-```
+> **Response**
+
+```json
 {
   "success": true,
   "accounts": [array of accounts who voted for delegate]

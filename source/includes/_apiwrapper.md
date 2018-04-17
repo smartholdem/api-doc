@@ -238,7 +238,7 @@ smartholdemApi.getBlockchainHeight((error, success, response) => {
 }
 ```
 
-### Get forged by account
+## Get forged by account
 Get amount forged by account.
 
 ```js
@@ -250,10 +250,12 @@ smartholdemApi.getForgedByAccount("Delegate public key (String)",
 });
 ```
 
-**Response**
-```
+> **Response**
+
+```json
 {
   "success": true,
   "sum": Forged amount (Integer)
 }
 ```
+

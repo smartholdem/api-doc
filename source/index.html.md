@@ -21,8 +21,8 @@ includes:
   - loader
   - peer
   - transport
-  - apiwrapper
   - examples
+  - apiwrapper
   - rpclib
   - errors
   - models

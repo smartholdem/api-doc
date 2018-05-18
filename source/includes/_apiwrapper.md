@@ -6,7 +6,7 @@ https://github.com/smartholdem/sthjs-wrapper
 
 ```shell
 # install
-npm install https://github.com/smartholdem/sthjs-wrapper --save
+npm install --save sthjs-wrapper
 ```
 
 ## Initialization
@@ -15,7 +15,7 @@ Before you begin, choose a network to initialize a list of nodes in that network
 
 ```js
 // init
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 var network = "main" //or "dev"
 smartholdemApi.init(network);
 ```
@@ -30,7 +30,7 @@ Get the balance of an account.
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api")
+var smartholdemApi = require("sthjs-wrapper")
 smartholdemApi.getBalance("Address of the account", (error, success, response) => {
     console.log(response);
 });
@@ -53,7 +53,7 @@ Get the public key of an account. If the account does not exist the API call wil
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api")
+var smartholdemApi = require("sthjs-wrapper")
 smartholdemApi.getPublicKey("Address of the account", (error, success, response) => {
     console.log(response);
 });
@@ -75,7 +75,7 @@ Returns account information of an address.
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api")
+var smartholdemApi = require("sthjs-wrapper")
 smartholdemApi.getAccount("Address of the account", (error, success, response) => {
     console.log(response);
 });
@@ -103,7 +103,7 @@ Get votes by account address.
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api")
+var smartholdemApi = require("sthjs-wrapper")
 smartholdemApi.getVotes("Address of the account", (error, success, response) => {
     console.log(response);
 });
@@ -138,7 +138,7 @@ Blocks manage API.
 Get block by id.
 
 ```js
-var smartholdemApi = require("sth-api")
+var smartholdemApi = require("sthjs-wrapper")
 smartholdemApi.getBlock("id: Id of block", (err, success, response) => {
   console.log(response);
 });
@@ -171,7 +171,7 @@ smartholdemApi.getBlock("id: Id of block", (err, success, response) => {
 Get all blocks.
 
 ```js
-var smartholdemApi = require("sth-api")
+var smartholdemApi = require("sthjs-wrapper")
 var parameters = {
   "totalFee: total fee of block. (Integer)",
   "totalAmount: total amount of block. (Integer)",
@@ -204,7 +204,7 @@ All parameters joins by OR.
 Get transaction fee for sending "normal" transactions.
 
 ```js
-var smartholdemApi = require("sth-api")
+var smartholdemApi = require("sthjs-wrapper")
 
 smartholdemApi.getBlockchainFee((error, success, response) => {
   console.log(response);
@@ -224,7 +224,7 @@ smartholdemApi.getBlockchainFee((error, success, response) => {
 Get blockchain height.
 
 ```js
-var smartholdemApi = require("sth-api")
+var smartholdemApi = require("sthjs-wrapper")
 
 smartholdemApi.getBlockchainHeight((error, success, response) => {
   console.log(response);
@@ -244,7 +244,7 @@ smartholdemApi.getBlockchainHeight((error, success, response) => {
 Get amount forged by account.
 
 ```js
-var smartholdemApi = require("sth-api")
+var smartholdemApi = require("sthjs-wrapper")
 
 smartholdemApi.getForgedByAccount("Delegate public key (String)",
                           (error, success, response) => {
@@ -274,7 +274,7 @@ Get delegate by username.
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 
 smartholdemApi.getDelegate("username of delegate", (error, success, response) => {
     console.log(response);
@@ -306,7 +306,7 @@ Get delegates list.
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 var parameters = {
   "limit: Limit to show. Integer. (Integer)",
   "offset: Offset (Integer)",
@@ -333,7 +333,7 @@ Get delegates next in line to forge
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 smartholdemApi.getNextForgers((error, success, response) => {
     console.log(response);
 });
@@ -357,7 +357,7 @@ Get votes by account address.
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 smartholdemApi.getVotes("Address of the account. (String)", (error, success, response) => {
     console.log(response);
 });
@@ -378,7 +378,7 @@ Get voters of delegate.
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 smartholdemApi.getVoters("Public key of delegate. (String)", (error, success, response) => {
     console.log(response);
 });
@@ -402,7 +402,7 @@ Get peers list by parameters.
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api")
+var smartholdemApi = require("sthjs-wrapper")
 smartholdemApi.getPeersList((error, success, response) => {
     console.log(response);
 });
@@ -435,7 +435,7 @@ Get peer by ip and port
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api")
+var smartholdemApi = require("sthjs-wrapper")
 
 smartholdemApi.getPeer("ip: Ip of peer. (String)",
                "port: Port of peer. (Integer)",
@@ -459,7 +459,7 @@ Get peer version and build time
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api")
+var smartholdemApi = require("sthjs-wrapper")
 smartholdemApi.getPeerVersion((error, success, response) => {
   console.log(response);
 });
@@ -485,7 +485,7 @@ Creates a transaction object to be sent
 > **Example**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 var options = {
   vendorField: "Smartbridge field (optional)",
   secondPassphrase: "Sender second passphrase (optional)"
@@ -503,7 +503,7 @@ Creates a delegate registration transaction to be sent
 > **Example**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 var transaction = smartholdemApi.createDelegateTransaction("Passphrase",
                       "Delegate name",
                       "Second passphrase (optional)");
@@ -516,7 +516,7 @@ Creates a second signature transaction to be sent
 > **Example**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 var transaction = smartholdemApi.createSecondSignatureTransaction("Passphrase",
                       "Second passphrase");
 console.log(transaction);
@@ -528,7 +528,7 @@ Creates a vote transaction to be sent
 > **Example**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 var transaction = smartholdemApi.createVoteTransaction("Passphrase",
                       ["+58199578191950019299181920120128129"] //Array of vote strings
                       "Second passphrase");
@@ -541,7 +541,7 @@ Broadcasts an array of transactions to multiple nodes
 > **Example**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 var transaction = smartholdemApi.sendTransactions([Transactions array], (error, success, response) => {
     console.log(response);
 });
@@ -567,7 +567,7 @@ Transactions list matched by provided parameters.
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 
 var parameters = {
   "blockId": "Block id of transaction. (String)",
@@ -615,7 +615,7 @@ Transaction matched by id.
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 smartholdemApi.getTransaction("String of transaction (String)", (error, success, response) => {
     console.log(response);
 });
@@ -636,7 +636,7 @@ Get unconfirmed transaction by id.
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 smartholdemApi.getUnconfirmedTransaction("String of transaction (String)", (error, success, response) => {
     console.log(response);
 });
@@ -657,7 +657,7 @@ Get list of unconfirmed transactions.
 > **Request**
 
 ```js
-var smartholdemApi = require("sth-api");
+var smartholdemApi = require("sthjs-wrapper");
 smartholdemApi.getUnconfirmedTransactions((error, success, response) => {
     console.log(response);
 });

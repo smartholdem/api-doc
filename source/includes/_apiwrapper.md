@@ -1,6 +1,8 @@
-# JS API Wrapper
+# JS API Wrapper 0.1.6
 
 https://github.com/smartholdem/sthjs-wrapper
+
+https://www.npmjs.com/package/sthjs-wrapper
 
 ## Installation
 

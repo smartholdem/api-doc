@@ -24,13 +24,17 @@ You're going to need:
 4. Initialize and start. You can either do this locally, or with Vagrant:
 
 ```shell
+
 # either run this to run locally
+
 gem install bundler
 bundle install
 bundle exec middleman server
 
 # OR run this to run with vagrant
+
 vagrant up
+
 ```
 
 You can now see the docs at http://localhost:4567. Whoa! That was fast!
@@ -40,8 +44,11 @@ Now that Slate is all set up on your machine, you'll probably want to learn more
 If you'd prefer to use Docker, instructions are available [in the wiki](https://github.com/lord/slate/wiki/Docker).
 
 ### Build
+
 ```shell
+
 bundle exec middleman build
+
 ```
 
 ### Note on JavaScript Runtime

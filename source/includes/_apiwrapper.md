@@ -1,8 +1,10 @@
 # JS API Wrapper
 
+https://github.com/smartholdem/sthjs-wrapper
+
 ## Installation
 
-https://github.com/smartholdem/sthjs-wrapper
+`npm install --save sthjs-wrapper`
 
 ```shell
 # install

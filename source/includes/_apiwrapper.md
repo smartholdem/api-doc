@@ -484,7 +484,10 @@ API calls related to transactions
 
 
 ## Create Transaction
-Creates a transaction object to be sent
+Creates a transaction object to be sent.
+<aside class="success">
+After create > Send transactions into network
+</aside>
 
 > **Example**
 

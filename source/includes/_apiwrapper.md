@@ -491,7 +491,7 @@ Creates a transaction object to be sent
 ```js
 var smartholdemApi = require("sthjs-wrapper");
 var options = {
-  vendorField: "Smartbridge field (optional)",
+  vendorField: "Message field (optional 64 bytes)",
   secondPassphrase: "Sender second passphrase (optional)"
 };
 var transaction = smartholdemApi.createTransaction("Sender passphrase",

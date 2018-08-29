@@ -12,13 +12,13 @@ and you can switch the programming language of the examples with the tabs in the
 
 connect to the mainnet api, use the link to node: <code>http://127.0.0.1:6100/api/</code>
 
-connect to the testnet api, use the link to node: <code>http://127.0.0.1:4100/api/</code>
-
 parameter | type | request | mainnet
 --------- | ------- | ----------- | -----------
 nethash | string | header | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
 port | integer | header | 6100
 
+
+connect to the devnet api, use the link to node: <code>http://80.211.38.83:6101/api/</code>
 
 parameter | type | request | devnet
 --------- | ------- | ----------- | -----------

@@ -3,8 +3,8 @@
 ## Send Transaction
 
 ```shell
-curl -k -H "Content-Type: application/json" -X PUT 
--d '{"secret":"<AddressSecretPassphrase>","amount":<Amount>,"recipientId":"<RecipientAddress>"}' 
+curl -k -H "Content-Type: application/json" -X PUT
+-d '{"secret":"<AddressSecretPassphrase>","amount":<Amount>,"recipientId":"<RecipientAddress>"}'
 http://127.0.0.1:6100/api/transactions
 ```
 
@@ -50,10 +50,10 @@ port | integer<br>(header) | 6100
 ## Get a single transaction
 
 ```shell
-curl -X GET "http://127.0.0.1:6100/api/transactions/get?id={TxID}" 
--H "accept: application/json" 
--H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
+curl -X GET "http://127.0.0.1:6100/api/transactions/get?id={TxID}"
+-H "accept: application/json"
+-H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7"
+-H "version: 0.0.2"
 -H "port: 6100"
 ```
 
@@ -107,10 +107,10 @@ port | integer<br>(header) | 6100
 ## Get all transactions
 
 ```shell
-curl -X GET "http://127.0.0.1:6100/api/transactions?limit={limit}&offset={offset}" 
--H "accept: application/json" 
--H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
+curl -X GET "http://127.0.0.1:6100/api/transactions?limit={limit}&offset={offset}"
+-H "accept: application/json"
+-H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7"
+-H "version: 0.0.2"
 -H "port: 6100"
 ```
 
@@ -191,10 +191,10 @@ port | integer<br>(header) | 6100
 ## Get all unconfirmed transactions
 
 ```shell
-curl -X GET "http://127.0.0.1:6100/api/transactions/unconfirmed" 
--H "accept: application/json" 
--H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7" 
--H "version: 0.0.2" 
+curl -X GET "http://127.0.0.1:6100/api/transactions/unconfirmed"
+-H "accept: application/json"
+-H "nethash: fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7"
+-H "version: 0.0.2"
 -H "port: 6100"
 ```
 
@@ -230,3 +230,41 @@ address | string<br>(query) | A valid Address.
 nethash | string<br>(header) | fc46bfaf9379121dd6b09f5014595c7b7bd52a0a6d57c5aff790b42a73c76da7
 version | string<br>(header) | 0.0.2
 port | integer<br>(header) | 6100
+
+## Timestamp Calc TX
+
+Calculation of transaction time begins from the first block 11/21/2017 @ 1:00pm (UTC),
+from unix time: 1511269200
+
+To get a human transaction time it is necessary to add to 1511269200 timestamp specified in the transaction
+
+Example:
+
+tx result:
+
+```json
+{
+  "success": true,
+  "transaction": {
+    "id": "2f5f333d46e6de3b77e76be0a358f83fb25cb4c3c8907fce117acef7f74c6844",
+    "blockid": "15218540347764387952",
+    "height": 135452,
+    "type": 0,
+    "timestamp": 3354199,
+    "amount": 200000000000,
+    "fee": 10000000,
+    "senderId": "STHiQuGcpz8EQstJiBZ5HkVWxrSwc7wPgH",
+    "recipientId": "SVx2j3NdZbDLfZ9HWS57NvqYg4c9grQLnx",
+    "senderPublicKey": "02573f491df3c6f031660b4b64b0421103fe32ec3d8615a234892aba227191aab5",
+    "signature": "3044022025303c28855f97b75e92d878dd5ff8023549da81b7605986e3bbf3ca57957d760220756e0d87be2aab86e27c6cd145ae45ba7edf2a51151cc35e98765f59b711c536",
+    "asset": {
+
+    },
+    "confirmations": 2985891
+  }
+}
+```
+tx timestamp = 3354199
+
+human time = 1511269200 + 3354199 = 1514623399 = 12/30/2017 @ 8:43am (UTC)
+

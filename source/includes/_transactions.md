@@ -240,8 +240,7 @@ To get a human transaction time it is necessary to add to 1511269200 timestamp s
 
 Example:
 
-tx result:
-
+> tx result:
 ```json
 {
   "success": true,
